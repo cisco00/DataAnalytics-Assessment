@@ -33,9 +33,11 @@ them (e.g., frequent vs. occasional users).
 
 **Task:** Calculate the average number of transactions per customer per month and
 categorize them:
-●​ "High Frequency" (≥10 transactions/month)/
-●​ "Medium Frequency" (3-9 transactions/month)/
-●​ "Low Frequency" (≤2 transactions/month)./
+●​ "High Frequency" (≥10 transactions/month)
+
+●​ "Medium Frequency" (3-9 transactions/month)
+
+●​ "Low Frequency" (≤2 transactions/month).
 
 **SQL File:** `sql_solutions/question_2.sql`
 
@@ -72,11 +74,7 @@ or the command-line interface.
     ```
 2.  **Select the database** where you have created the four 
 tables (`users_customuser`, `savings_savingsaccount`, `plans_plan`, `withdrawals_withdrawal`). 
-If you haven't created the tables, please refer to the instructions provided in the assessment or 
-the `CREATE TABLE` statements potentially provided elsewhere.
-    ```sql
-    USE <your_database_name>;
-    ```
+
 3.  **Execute each SQL file:** You can execute each `.sql` file using the `source` command in the MySQL client:
     ```sql
     SOURCE /path/to/your/sql_solutions/question_1.sql;
@@ -86,7 +84,7 @@ the `CREATE TABLE` statements potentially provided elsewhere.
     ```
     Replace `/path/to/your/sql_solutions/` with the actual path to the `sql_solutions` directory on your system.
 
-Alternatively, you can copy and paste the content of each `.sql` file directly into your MySQL client and execute the queries.
+Alternatively, you can open, copy and paste the content of each `.sql` file directly into your MySQL client and execute the queries.
 
 ## Notes
 
