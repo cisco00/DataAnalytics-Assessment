@@ -7,10 +7,15 @@ The assessment involved analyzing a database with four tables: `users_customuser
 ## Repository Structure
 
 DataAnalytics-Assessment/
+
 ├── README.md
+
 ├── question_1.sql
+
 ├── question_2.sql
+
 ├── question_3.sql
+
 └── question_4.sql
 
 ## Assessment Questions and Solutions
@@ -33,6 +38,7 @@ them (e.g., frequent vs. occasional users).
 
 **Task:** Calculate the average number of transactions per customer per month and
 categorize them:
+
 ●​ "High Frequency" (≥10 transactions/month)
 
 ●​ "Medium Frequency" (3-9 transactions/month)
