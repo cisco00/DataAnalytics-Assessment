@@ -7,11 +7,11 @@ The assessment involved analyzing a database with four tables: `users_customuser
 ## Repository Structure
 
 DataAnalytics-Assessment/
-├── README.md/
-├── question_1.sql/
-├── question_2.sql/
-├── question_3.sql/
-└── question_4.sql/
+├── README.md
+├── question_1.sql
+├── question_2.sql
+├── question_3.sql
+└── question_4.sql
 
 ## Assessment Questions and Solutions
 
