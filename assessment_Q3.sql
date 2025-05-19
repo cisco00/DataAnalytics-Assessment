@@ -1,3 +1,4 @@
+use adashi_staging;
 SELECT
     p.id AS plan_id,
     p.owner_id,
@@ -7,12 +8,13 @@ SELECT
         ELSE 'Unknown'
     END AS type,
     MAX(sa.transaction_date) AS last_transaction_date,
-    JULIANDAY(DATE('now')) - JULIANDAY(MAX(sa.transaction_date)) AS inactivity_days
+    DATEDIFF(CURDATE(), MAX(sa.transaction_date)) AS inactivity_days
 FROM
     plans_plan p
 JOIN
     savings_savingsaccount sa ON p.id = sa.plan_id
-WHERE p.is_regular_savings = 1 OR p.is_a_fund = 1
+WHERE
+    p.is_regular_savings = 1 OR p.is_a_fund = 1
 GROUP BY
     p.id, p.owner_id
 HAVING

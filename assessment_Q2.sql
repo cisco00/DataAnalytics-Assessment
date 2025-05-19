@@ -1,25 +1,27 @@
+use adashi_staging;
+
 WITH monthly_transactions AS (
     SELECT
         u.id AS customer_id,
-        u.name,
-        strftime('%Y-%m', sa.transaction_date) AS transaction_month,
+        u.username,
+		DATE_FORMAT(sa.transaction_date, '%Y-%m') AS transaction_month ,
         COUNT(*) AS transaction_count
     FROM
         users_customuser u
     JOIN
         savings_savingsaccount sa ON u.id = sa.owner_id
     GROUP BY
-        u.id, u.name, strftime('%Y-%m', sa.transaction_date)
+        u.id, u.username, DATE_FORMAT(sa.transaction_date, '%Y-%m')
 ),
 avg_monthly_transactions AS (
     SELECT
         customer_id,
-        name,
+        username,
         AVG(transaction_count) AS avg_transactions_per_month
     FROM
         monthly_transactions
     GROUP BY
-        customer_id, name
+        customer_id, username
 )
 SELECT
     CASE
